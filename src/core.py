@@ -23,7 +23,7 @@ def run(author_list, conference, journal):
     author_results = list()
     while author_list:
         author_pubs = author_list.pop()
-        author_names.append(author_pubs.split('.csv')[0])
+        author_names.append(author_pubs.split('/')[-1].split('.csv')[0])
         author_results.append(points(author_pubs, conference, journal))
     ranked_authors_points = list(zip(author_names, author_results))
     ranked_authors_points.sort(key=lambda x: x[1], reverse=True)

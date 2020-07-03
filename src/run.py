@@ -3,8 +3,8 @@ from utils import csv_to_dict
 from core import run
 
 if __name__ == "__main__":
-    conference = csv_to_dict("conference_qualis.csv")
-    journal = csv_to_dict("journal_qualis.csv")
+    conference = csv_to_dict("../data/conference_qualis.csv")
+    journal = csv_to_dict("../data/journal_qualis.csv")
     path = '.'
     if len(sys.argv) > 1:
         persons = sys.argv[1:]
